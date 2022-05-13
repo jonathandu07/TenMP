@@ -1,83 +1,89 @@
-liste = open("motdepasse.txt","r")
-import threading
-import random
 import time
-
+import random
+import threading
+liste = open("password_list.txt", "r")
+print (liste.read())
+#liste.close()
 start = time.time()
-motdepasse =[]
+motdepasse = []
+motdepasse.append(liste.read())
 
-while len(motdepasse) != 10:
-    def sortie1():
-        for i in random.choice(liste):
-            if i not in motdepasse:
-                motdepasse.append(i)
-            else :
-                continue
+
+
+
+def sortie1():
+    for i in random.choice(liste.read()):
+        if i not in motdepasse:
+            motdepasse.append(i)
+        else:
+            continue
+
+
+def sortie2():
+    for i in random.choice(liste.read()):
+        if i not in motdepasse:
+            motdepasse.append(i)
+        else:
+            continue
+
+
+def sortie3():
+    for i in random.choice(liste.read()):
+        if i not in motdepasse:
+            motdepasse.append(i)
+        else:
+            continue
+
+
+def sortie4():
+    for i in random.choice(liste.read()):
+        if i not in motdepasse:
+            motdepasse.append(i)
+        else:
+            pass
+
+def sortie5():
+    for i in random.choice(liste.read()):
+        if i not in motdepasse:
+            motdepasse.append(i)
+        else :
+            continue
+
                 
+def sortie6():
+    for i in random.choice(liste.read()):
+        if i not in motdepasse:
+            motdepasse.append(i)            
+        else :
+            continue
+
+def sortie7():
+    for i in random.choice(liste.read()):
+        if i not in motdepasse:
+            motdepasse.append(i)
+        else :
+            continue
+
+def sortie8():
+    for i in random.choice(liste.read()):
+        if i not in motdepasse:
+            motdepasse.append(i)
+        else :
+            continue                
                 
-    def sortie2():
-        for i in random.choice(liste):
-            if i not in motdepasse:
-                motdepasse.append(i)
-            else :
-                continue                       
-                
-    def sortie3():
-        for i in random.choice(liste):
-            if i not in motdepasse:
-                motdepasse.append(i)
-            else :
-                continue
+def sortie9():
+    for i in random.choice(liste.read()):
+        if i not in motdepasse:
+            motdepasse.append(i)
+        else :
+            continue
 
-    def sortie4():
-        for i in random.choice(liste):
-            if i not in motdepasse:
-                motdepasse.append(i)
-            else :
-                pass
-
-    def sortie5():
-        for i in random.choice(liste):
-            if i not in motdepasse:
-                motdepasse.append(i)
-            else :
-                continue
-
-                
-    def sortie6():
-        for i in random.choice(liste):
-            if i not in motdepasse:
-                motdepasse.append(i)            
-            else :
-                continue
-
-    def sortie7():
-        for i in random.choice(liste):
-            if i not in motdepasse:
-                motdepasse.append(i)
-            else :
-                continue
-
-    def sortie8():
-        for i in random.choice(liste):
-            if i not in motdepasse:
-                motdepasse.append(i)
-            else :
-                continue                
-                
-    def sortie9():
-        for i in random.choice(liste):
-            if i not in motdepasse:
-                motdepasse.append(i)
-            else :
-                continue
-
-    def sortie10():
-        for i in random.choice(liste):
-            if i not in motdepasse:
-                motdepasse.append(i)
-            else :
-                continue            
+def sortie10():
+    for i in random.choice(liste.read()):
+        if i not in motdepasse:
+            motdepasse.append(i)
+        else :
+            continue            
             
 action1 =threading.Thread(target=sortie1)
 action2 =threading.Thread(target=sortie2)
@@ -92,30 +98,31 @@ action10=threading.Thread(target=sortie10)
 
 
 
-sortie1.start()
-sortie2.start()
-sortie3.start()
-sortie4.start()
-sortie5.start()
-sortie6.start()
-sortie7.start()
-sortie8.start()
-sortie9.start()
-sortie10.start()
+action1.start()
+action2.start()
+action3.start()
+action4.start()
+action5.start()
+action6.start()
+action7.start()
+action8.start()
+action9.start()
+action10.start()
 
 
 
-sortie1.join()
-sortie2.join()
-sortie3.join()
-sortie4.join()
-sortie5.join()
-sortie6.join()
-sortie7.join()
-sortie8.join()
-sortie9.join()
-sortie10.join()
+action1.join()
+action2.join()
+action3.join()
+action4.join()
+action5.join()
+action6.join()
+action7.join()
+action8.join()
+action9.join()
+action10.join()
+
+liste.close()
 
 end = time.time()
-    
 print(end-start)
